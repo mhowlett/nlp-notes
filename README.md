@@ -72,6 +72,7 @@ General procedure:
    
    Features used by the second classifier include:
     1. Existance of a market direction token and it's value.
+    2. other features.
 
 
 
