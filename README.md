@@ -74,6 +74,4 @@ General procedure:
     1. Existance of a market direction token and it's value.
     2. other features.
 
-
-
-
+An experiment by (matt)[https://www.matthowlett.com]
