@@ -6,7 +6,7 @@ We want to extract relations of the form:
 
 (person or entity)  is long/short  (security/topic name).
 
-from arbitrary natural language text. Also, there my be meta-data available (such as prior 
+from arbitrary natural language text. Also, there my be meta-data available (such as 
 knowledge that an article is by a particular person, or categorized in a certain way).
 
 General procedure:
