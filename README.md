@@ -23,9 +23,9 @@ General procedure:
    a POS tagger for this task (we use a standard methodology).
 
 5. Identify and tag tokens or groups of tokens that:
-   4a. correspond to stock symbols or other topics known to our system. 
-   4b. correspond to company names known to our system.
-   4c. correspond to people/entities known to our system.
+   1. correspond to stock symbols or other topics known to our system. 
+   2. correspond to company names known to our system.
+   3. correspond to people/entities known to our system.
 
    Identifying company names is the most difficult of these and described in more detail below:
 
@@ -46,10 +46,10 @@ General procedure:
       text that corresponds to the company name.
 
 6. Identify and tag other miscellaneous token types specific to our domain including:
-   6a. Dollar amounts
-   6b. Day of week.
-   6c. Month of year.
-   6d. market direction token (long/short/bearish/bullish, etc.)
+   1. Dollar amounts
+   2. Day of week.
+   3. Month of year.
+   4. market direction token (long/short/bearish/bullish, etc.)
 
    In some cases, (eg month of year), the task requires a classifier similar to company name.
 
