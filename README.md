@@ -41,7 +41,8 @@ General procedure:
       (longest alternative first). In many instances this match will not correspond to a real 
       mention of the company. For example, the word Apple can be used in other contexts. We train a 
       binary classifier to make this decision. Features used by this classifier are POS tags of
-      the tokens immediately prior and after the company, whether or not the candidate company
+      the tokens immediately prior and after the company, whether or not the company name ends
+      with a standard token (eg inc.), whether or not the candidate company
       name appears in an english dictionary, and whether or not there is a stock symbol in nearby
       text that corresponds to the company name.
 
@@ -51,11 +52,12 @@ General procedure:
    3. Month of year.
    4. market direction token (long/short/bearish/bullish, etc.)
 
-   In some cases, (eg month of year), the task requires a classifier similar to company name.
+   In some cases, (eg month of year), the task requires a classifier methodology similar to company
+   name. In some cases, text pattern matching is sufficient.
 
 7. The tokenized text has now been tagged with quite a lot of high level information and we are
    ready for prediction extraction. First, we decide on some features on which to anchor our 
-   search for predictions. For example we might consider any occurance of a person name, and 
+   search for predictions. Currently, we consider any occurance of a person name, and 
    a company name in text separated by not more than 10 additional tokens as a candidate prediction.
    We train a binary classifier to decide whether a candidate prediction is an actual prediction.
    For each positively identified prediction, we then train another classifier to decide whether
@@ -67,7 +69,9 @@ General procedure:
     3. POS tags of tokens immediately before and after 
     4. existance of a stock symbol name 
     5. existance of a market direction token.
-    6. etc.
+   
+   Features used by the second classifier include:
+    1. Existance of a market direction token and it's value.
 
 
 
